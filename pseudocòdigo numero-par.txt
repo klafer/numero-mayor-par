@@ -1,0 +1,22 @@
+INICIO
+DECLARA n=0, mayor=0, divisible=0, tam_arreglo=1000, bandera=0
+DECLARA arreglo[tam_arreglo]
+
+MIENTRAS n > (tam_arreglo-2) HACER
+	SI (arreglo[n]>mayor Y arreglo[n]%2==0 Y arreglo[n+1]%2!=0 Y arreglo[n+2]==arreglo[n]/2 Y arreglo[n]==arreglo[n-1]+arreglo[n+1]) ENTONCES
+		mayor=arreglo[n]
+		divisible=mayor/2
+		bandera=1
+	FIN SI
+	AUMENTA n
+
+FIN MIENTRAS
+
+SI bandera!=0 ENTONCES
+	IMPRIME EL RESULTADO SI SE ENCUENTRA
+	TERMINA EL PROGRAMA
+FIN SI
+
+IMPRIME QUE NO ENCONTRO RESULTADO
+
+FIN
